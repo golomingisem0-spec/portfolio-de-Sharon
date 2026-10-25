@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============================================================
+       PORTFOLIO — SHARON MBUYI BADIBANGA
+       Site statique (HTML / CSS / JavaScript), sans dépendance externe.
+       Points d'entrée :
+       • Textes et sections   : ce fichier (index.html)
+       • Design et responsive : css/style.css
+       • Interactions          : js/script.js
+       • Photos                : assets/images/profile/ (voir README.md)
+       ============================================================ -->
+
+  <title>Sharon MBUYI BADIBANGA — Portfolio · Économie internationale</title>
+  <meta name="description" content="Portfolio de Sharon MBUYI BADIBANGA, étudiante en Master en Économie Internationale : analyse, recherche, politiques publiques et coordination académique.">
+  <meta name="author" content="Sharon MBUYI BADIBANGA">
+  <meta name="theme-color" content="#16332B">
+  <meta name="color-scheme" content="light">
+
+  <!-- Réseaux sociaux — remplacer les URL relatives par des URL absolues après mise en ligne. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Sharon MBUYI BADIBANGA — Portfolio">
+  <meta property="og:description" content="Étudiante en Master en Économie Internationale. Analyse, recherche, politiques publiques et coordination académique.">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio de Sharon MBUYI BADIBANGA — monogramme SB sur fond vert profond">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sharon MBUYI BADIBANGA — Portfolio">
+  <meta name="twitter:description" content="Étudiante en Master en Économie Internationale. Analyse, recherche, politiques publiques et coordination académique.">
+  <meta name="twitter:image" content="assets/images/og-cover.png">
+  <meta name="twitter:image:alt" content="Portfolio de Sharon MBUYI BADIBANGA — monogramme SB sur fond vert profond">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Données structurées : uniquement des informations factuelles, sans photo. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sharon MBUYI BADIBANGA",
+    "jobTitle": "Étudiante en Master en Économie Internationale",
+    "email": "sharonbadibanga14@gmail.com",
+    "telephone": "+243897969423",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kinshasa",
+      "addressCountry": "CD"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Université Protestante au Congo"
+    },
+    "knowsLanguage": ["fr", "en", "ln", "lua"],
+    "sameAs": ["https://www.linkedin.com/in/sharon-badibanga-8170a128a"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <!-- ==========================================================
+       EN-TÊTE & NAVIGATION
+       ========================================================== -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#accueil" aria-label="Sharon MBUYI BADIBANGA — retour à l’accueil">
+        <span class="brand__mark" aria-hidden="true">SB</span>
+        <span class="brand__text">
+          <span class="brand__name">Sharon MBUYI BADIBANGA</span>
+          <span class="brand__sub">Portfolio · Kinshasa</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#a-propos" data-nav-link>À propos</a></li>
+          <li><a class="nav__link" href="#parcours" data-nav-link>Parcours</a></li>
+          <li><a class="nav__link" href="#experiences" data-nav-link>Expériences</a></li>
+          <li><a class="nav__link" href="#leadership" data-nav-link>Leadership</a></li>
+          <li><a class="nav__link" href="#competences" data-nav-link>Compétences</a></li>
+          <li><a class="nav__link" href="#langues" data-nav-link>Langues</a></li>
+          <li><a class="nav__link" href="#formation" data-nav-link>Formation</a></li>
+        </ul>
+        <a class="nav__cta" href="#contact" data-nav-link>Me contacter</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="menu-mobile" aria-label="Ouvrir le menu de navigation" data-menu-toggle>
+        <span class="menu-toggle__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile plein écran (élément <dialog> : fermeture au clavier et retour du focus natifs). -->
+  <dialog class="menu" id="menu-mobile" aria-label="Menu de navigation">
+    <div class="menu__inner">
+      <div class="menu__head">
+        <a class="brand brand--light" href="#accueil" data-menu-close>
+          <span class="brand__mark" aria-hidden="true">SB</span>
+          <span class="brand__text">
+            <span class="brand__name">Sharon MBUYI BADIBANGA</span>
+            <span class="brand__sub">Portfolio · Kinshasa</span>
+          </span>
+        </a>
+        <button class="menu__close" type="button" aria-label="Fermer le menu" data-menu-close>
+          <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="menu__nav" aria-label="Navigation mobile">
+        <ol class="menu__list">
+          <li><a class="menu__link" data-nav-link href="#a-propos" data-menu-close><span class="menu__num">01</span>À propos<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#parcours" data-menu-close><span class="menu__num">02</span>Parcours<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#experiences" data-menu-close><span class="menu__num">03</span>Expériences<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#leadership" data-menu-close><span class="menu__num">04</span>Leadership<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#competences" data-menu-close><span class="menu__num">05</span>Compétences<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#langues" data-menu-close><span class="menu__num">06</span>Langues<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#formation" data-menu-close><span class="menu__num">07</span>Formation<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#references" data-menu-close><span class="menu__num">08</span>Références<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+          <li><a class="menu__link" data-nav-link href="#contact" data-menu-close><span class="menu__num">09</span>Contact<svg class="icon menu__arrow" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></li>
+        </ol>
+      </nav>
+
+      <div class="menu__footer">
+        <a class="menu__contact" href="mailto:sharonbadibanga14@gmail.com">sharonbadibanga14@gmail.com</a>
+        <a class="menu__contact" href="tel:+243897969423">+243 897 969 423</a>
+        <a class="menu__social" href="https://www.linkedin.com/in/sharon-badibanga-8170a128a" target="_blank" rel="noopener noreferrer">
+          LinkedIn<span class="visually-hidden"> (nouvel onglet)</span>
+          <svg class="icon icon--fill" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <main id="contenu" tabindex="-1">
+
+    <!-- ==========================================================
+         ACCUEIL / HERO
+         ========================================================== -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--hero">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Économie internationale&nbsp;· Recherche&nbsp;·&nbsp;Développement
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__name">Sharon</span>
+            <span class="hero__surname">MBUYI BADIBANGA</span>
+          </h1>
+
+          <p class="hero__role">Étudiante en Master en Économie Internationale <span aria-hidden="true">·</span> Université Protestante au Congo</p>
+
+          <p class="hero__lead">
+            Un parcours qui relie <strong>analyse économique</strong>, recherche et coordination, au service de projets académiques et de développement.
+          </p>
+
+          <p class="hero__quote" lang="en">“Master’s student in International Economics with a strong interest in economic analysis, research and public policy.”</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#parcours">
+              Découvrir mon parcours
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Me contacter</a>
+            <a class="btn-icon" href="https://www.linkedin.com/in/sharon-badibanga-8170a128a" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Sharon MBUYI BADIBANGA (nouvel onglet)">
+              <svg class="icon icon--fill" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+            </a>
+          </div>
+
+          <ul class="hero__meta">
+            <li><span class="hero__meta-label">Basée à</span><span class="hero__meta-value">Kinshasa, RDC</span></li>
+            <li><span class="hero__meta-label">Formation</span><span class="hero__meta-value">Master 1 · UPC</span></li>
+            <li><span class="hero__meta-label">Langues</span><span class="hero__meta-value">FR C2 · EN B2</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <!-- PHOTO PRINCIPALE : déposer le fichier « sharon-portrait.jpg » dans
+               assets/images/profile/ pour remplacer automatiquement ce placeholder.
+               Format conseillé : portrait vertical 4:5, 1200 × 1500 px minimum. -->
+          <figure class="portrait" data-photo>
+            <span class="portrait__outline" aria-hidden="true"></span>
+            <div class="portrait__frame">
+              <div class="portrait__placeholder" aria-hidden="true">
+                <span class="portrait__rings"></span>
+                <span class="portrait__monogram">SB</span>
+                <span class="portrait__placeholder-text">Portrait professionnel<br>à venir</span>
+              </div>
+              <img class="portrait__img" src="assets/images/profile/sharon-portrait.jpg" alt="Portrait de Sharon MBUYI BADIBANGA — photo officielle à venir" width="900" height="1125" decoding="async">
+            </div>
+            <figcaption class="portrait__caption">
+              <span class="portrait__caption-await">Emplacement réservé à la photo officielle</span>
+              <span class="portrait__caption-name">Sharon MBUYI BADIBANGA</span>
+            </figcaption>
+            <div class="portrait__card" aria-hidden="true">
+              <span class="portrait__card-kicker">Actuellement</span>
+              <span class="portrait__card-text">Master 1 · Économie Internationale</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         À PROPOS
+         ========================================================== -->
+    <section class="section" id="a-propos" aria-labelledby="a-propos-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">01</span><span class="eyebrow__label">À propos</span></p>
+          <h2 class="section-title" id="a-propos-title">Une trajectoire entre <em>analyse</em>, recherche et action collective.</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__body" data-reveal>
+            <p class="about__lead">Étudiante en Master en Économie Internationale, Sharon construit un profil qui relie analyse économique, recherche et organisation.</p>
+            <p>Formée en sciences économiques à l’Université Protestante au Congo, elle poursuit un Master en Économie Internationale. Son parcours l’a conduite au contact d’une structure de recherche, d’une agence et d’une organisation internationale. Elle y a développé une pratique concrète de l’assistance administrative, de la coordination et de la production documentaire.</p>
+            <p>Attentive aux mécanismes économiques et aux enjeux de développement, elle mobilise rigueur analytique, sens de l’organisation et capacité de synthèse pour faire avancer des travaux collectifs et produire des documents clairs.</p>
+            <p>Ses responsabilités de chef de groupe puis de chef de promotion lui ont appris à fédérer des équipes, à planifier des activités et à faciliter l’apprentissage entre pairs. Animée par un apprentissage continu, elle souhaite renforcer ses compétences en recherche appliquée, en analyse économique et en gestion de projets.</p>
+          </div>
+
+          <aside class="about__aside" aria-labelledby="interets-title" data-reveal>
+            <h3 class="about__aside-title" id="interets-title">Domaines d’intérêt</h3>
+            <ul class="interest-list">
+              <li>Analyse économique</li>
+              <li>Recherche &amp; synthèse documentaire</li>
+              <li>Politiques publiques &amp; développement</li>
+              <li>Gestion de projets &amp; initiatives collectives</li>
+            </ul>
+            <div class="about__current">
+              <p class="about__current-label">Actuellement</p>
+              <p class="about__current-text">Master 1 en Économie Internationale<br><span>Université Protestante au Congo</span></p>
+              <a class="link-arrow" href="#leadership">Chef de promotion
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="bilingual" data-reveal>
+          <div class="bilingual__item">
+            <p class="bilingual__label">Positionnement · Français</p>
+            <p class="bilingual__text">« Étudiante en Master en Économie Internationale, avec une expérience en assistance à la recherche, en soutien administratif et en coordination académique. Fort intérêt pour le développement international, la gestion de programmes et la prise de décision fondée sur les données probantes. »</p>
+          </div>
+          <div class="bilingual__item">
+            <p class="bilingual__label" lang="en">Positioning · English</p>
+            <p class="bilingual__text" lang="en">“Master’s student in International Economics with experience in research assistance, administrative support and academic coordination. Strong interest in international development, programme management and evidence-based decision-making.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         PARCOURS ACADÉMIQUE
+         ========================================================== -->
+    <section class="section section--tint" id="parcours" aria-labelledby="parcours-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">02</span><span class="eyebrow__label">Parcours académique</span></p>
+          <h2 class="section-title" id="parcours-title">Une formation construite en <em>sciences économiques</em>.</h2>
+          <p class="section-head__lead">Du baccalauréat scientifique au Master en Économie Internationale : un parcours cohérent, orienté vers l’analyse et la compréhension des enjeux économiques.</p>
+        </header>
+
+        <ol class="steps" aria-label="Étapes du parcours académique">
+          <li class="step" data-reveal>
+            <article class="step__card">
+              <div class="step__top">
+                <span class="step__index" aria-hidden="true">01</span>
+                <span class="step__status">Diplôme</span>
+              </div>
+              <h3 class="step__title">Baccalauréat en sciences</h3>
+              <p class="step__school">Écoles des humanités Institut Mgr Bokeleale</p>
+            </article>
+          </li>
+          <li class="step" data-reveal>
+            <article class="step__card">
+              <div class="step__top">
+                <span class="step__index" aria-hidden="true">02</span>
+                <span class="step__status">Diplôme</span>
+              </div>
+              <h3 class="step__title">Licence en sciences économiques</h3>
+              <p class="step__school">Université Protestante au Congo</p>
+            </article>
+          </li>
+          <li class="step step--current" data-reveal>
+            <article class="step__card">
+              <div class="step__top">
+                <span class="step__index" aria-hidden="true">03</span>
+                <span class="step__status step__status--live">En cours</span>
+              </div>
+              <h3 class="step__title">Master en Économie Internationale</h3>
+              <p class="step__school">Université Protestante au Congo</p>
+              <p class="step__note">Master 1 · Chef de promotion</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         EXPÉRIENCES
+         ========================================================== -->
+    <section class="section" id="experiences" aria-labelledby="experiences-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">03</span><span class="eyebrow__label">Expériences</span></p>
+          <h2 class="section-title" id="experiences-title">Des expériences concrètes, une même <em>exigence de rigueur</em>.</h2>
+          <p class="section-head__lead">Assistance administrative, coordination académique, communication et gestion : chaque expérience a nourri une même exigence de structuration et de fiabilité.</p>
+        </header>
+
+        <ol class="timeline">
+          <!-- Stage PNUD — aucune description de mission n’est fournie dans le CV.
+               Remplacer le paragraphe « xp__pending » par une liste dès que possible. -->
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__date">Juillet 2026</p>
+            <article class="xp">
+              <p class="xp__kicker">Stage professionnel</p>
+              <h3 class="xp__title">Programme des Nations Unies pour le Développement (PNUD)</h3>
+              <p class="xp__pending">Le détail des missions sera complété prochainement.</p>
+            </article>
+          </li>
+
+          <!-- Le CV ne précise pas l’organisation de ce poste : la mentionner ici le moment venu. -->
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__date">17 août 2025</p>
+            <article class="xp">
+              <p class="xp__kicker">Communication &amp; marketing <span class="xp__tag">Promotion</span></p>
+              <h3 class="xp__title">Directrice de la communication et gestion marketing</h3>
+              <ul class="xp__list">
+                <li>Coordination des activités au sein de la direction.</li>
+                <li>Amélioration et structuration de la communication interne et externe.</li>
+                <li>Amélioration de l’image de marque par le CrossMedia.</li>
+                <li>Formation du personnel au poste de Community Manager.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__date">Juin 2025</p>
+            <article class="xp">
+              <p class="xp__kicker">Stage académique</p>
+              <h3 class="xp__title">AZES — Agence des Zones Économiques Spéciales</h3>
+              <ul class="xp__list">
+                <li>Correspondance administrative.</li>
+                <li>Comptes rendus.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__date">Depuis août 2024</p>
+            <article class="xp">
+              <p class="xp__kicker">Assistance administrative</p>
+              <h3 class="xp__title">Assistante au secrétariat administratif</h3>
+              <p class="xp__org">CRIBE — Centre de recherche Infini sur le Bien-Être</p>
+              <ul class="xp__list">
+                <li>Rédaction de documents.</li>
+                <li>Gestion de dossiers.</li>
+                <li>Soutien administratif au sein d’un centre de recherche.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__date">Depuis février 2024</p>
+            <article class="xp">
+              <p class="xp__kicker">Gestion &amp; organisation</p>
+              <h3 class="xp__title">Gestion locative</h3>
+              <ul class="xp__list">
+                <li>Suivi des loyers d’une maison locative de 3 ménages.</li>
+                <li>Suivi des paiements d’eau et d’électricité.</li>
+                <li>Digitalisation des modalités de paiement.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__date">Octobre 2023 — Août 2025</p>
+            <article class="xp">
+              <p class="xp__kicker">Community management</p>
+              <h3 class="xp__title">Community manager</h3>
+              <p class="xp__org">Nalex Couture</p>
+              <ul class="xp__list">
+                <li>Gestion du compte Instagram : stratégie de communication et création de contenu.</li>
+                <li>Développement de l’engagement par une communication régulière et ciblée.</li>
+              </ul>
+              <div class="metric" role="group" aria-label="Résultat : de 600 à 2 000 abonnés Instagram en un an">
+                <p class="metric__values" aria-hidden="true">
+                  <span>600</span>
+                  <svg class="icon metric__arrow"><use href="#i-arrow-right"></use></svg>
+                  <span>2 000</span>
+                </p>
+                <p class="metric__label">abonnés Instagram en un an</p>
+                <p class="metric__context">Grâce à une communication régulière et ciblée.</p>
+              </div>
+            </article>
+          </li>
+        </ol>
+
+        <div class="experience-extra" data-reveal>
+          <div class="experience-extra__intro">
+            <span class="experience-extra__icon" aria-hidden="true"><svg class="icon"><use href="#i-users"></use></svg></span>
+            <p class="xp__kicker">Encadrement académique</p>
+            <h3 class="experience-extra__title">Chef de groupe d’étudiants</h3>
+            <p class="experience-extra__meta">De la L1 à la L3</p>
+          </div>
+          <div class="experience-extra__body">
+            <ul class="xp__list">
+              <li>Coordination de groupes de 3 à 20 étudiants pour des travaux académiques.</li>
+              <li>Leadership fondé sur l’organisation, l’exigence et la coopération.</li>
+              <li>Résultats régulièrement supérieurs à la moyenne, reflétant l’efficacité du pilotage et la qualité du travail collaboratif.</li>
+            </ul>
+            <a class="link-arrow" href="#leadership">Voir les responsabilités de leadership
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         LEADERSHIP & ACTIVITÉS ACADÉMIQUES
+         ========================================================== -->
+    <section class="section section--dark" id="leadership" aria-labelledby="leadership-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">04</span><span class="eyebrow__label">Leadership &amp; engagements</span></p>
+          <h2 class="section-title" id="leadership-title">Fédérer les énergies et faire vivre le <em>débat</em>.</h2>
+          <p class="section-head__lead">Des responsabilités étudiantes qui prolongent l’intérêt pour l’économie internationale, le débat et l’apprentissage collectif.</p>
+        </header>
+
+        <div class="leadership__grid">
+          <article class="lead-card lead-card--feature" data-reveal>
+            <p class="lead-card__kicker">Responsabilité étudiante</p>
+            <h3 class="lead-card__title">Chef de promotion<br>Master 1 — Économie Internationale</h3>
+            <p class="lead-card__org">Université Protestante au Congo</p>
+            <p class="lead-card__intro">Animation de la promotion à travers des ateliers, des débats scientifiques et des activités de lecture, avec une attention particulière portée à la progression collective et à l’anglais.</p>
+            <ul class="lead-list">
+              <li>Initiation d’ateliers et de débats scientifiques autour de l’économie internationale.</li>
+              <li>Activités dédiées à l’amélioration de l’anglais et à la lecture au sein de la promotion.</li>
+              <li>Organisation stratégique des activités académiques.</li>
+            </ul>
+            <ul class="tags tags--dark">
+              <li lang="en">Academic leadership</li>
+              <li lang="en">Team coordination</li>
+              <li lang="en">Peer learning facilitation</li>
+              <li lang="en">Initiation of scientific workshops and debates</li>
+              <li lang="en">Strategic organization of academic activities</li>
+            </ul>
+          </article>
+
+          <div class="leadership__side">
+            <article class="lead-card" data-reveal>
+              <span class="lead-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-globe"></use></svg></span>
+              <p class="lead-card__kicker">Engagement international</p>
+              <h3 class="lead-card__title lead-card__title--sm">World Bank Group<br>DRC online delegates</h3>
+              <p class="lead-card__meta">Délégation en ligne · RDC</p>
+            </article>
+
+            <article class="lead-card" data-reveal>
+              <span class="lead-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-chat"></use></svg></span>
+              <p class="lead-card__kicker">Engagement académique</p>
+              <h3 class="lead-card__title lead-card__title--sm">Organisation de conférences philosophiques</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         COMPÉTENCES
+         ========================================================== -->
+    <section class="section" id="competences" aria-labelledby="competences-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">05</span><span class="eyebrow__label">Compétences</span></p>
+          <h2 class="section-title" id="competences-title">Un socle analytique, organisationnel et <em>humain</em>.</h2>
+          <p class="section-head__lead">Des compétences développées au fil de la formation, des expériences administratives et des responsabilités collectives.</p>
+        </header>
+
+        <div class="skills">
+          <article class="skill-card skill-card--wide" data-reveal>
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-analytics"></use></svg></span>
+              <h3>Analyse &amp; recherche</h3>
+            </header>
+            <ul class="tags">
+              <li lang="en">Analytical thinking</li>
+              <li lang="en">Qualitative and documentary research</li>
+              <li lang="en">Economic reasoning and interpretation</li>
+              <li lang="en">Synthesis of complex information</li>
+              <li lang="en">Academic research support</li>
+              <li lang="en">Research assistance</li>
+              <li lang="en">Literature review</li>
+              <li lang="en">Drafting of academic and administrative documents</li>
+              <li lang="en">Note-taking and reporting</li>
+              <li lang="en">Scientific discussion facilitation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-briefcase"></use></svg></span>
+              <h3>Compétences professionnelles</h3>
+            </header>
+            <ul class="tags">
+              <li lang="en">Community management</li>
+              <li>Word</li>
+              <li>Excel</li>
+              <li>PowerPoint</li>
+            </ul>
+            <p class="skill-card__note"><span>Diplômes</span>Bac en sciences · Licence en sciences économiques</p>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-layers"></use></svg></span>
+              <h3>Organisation</h3>
+            </header>
+            <ul class="tags">
+              <li>Planification</li>
+              <li>Proactivité</li>
+              <li>Créativité</li>
+              <li>Autonomie</li>
+              <li>Sens des responsabilités</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-users"></use></svg></span>
+              <h3>Relationnel</h3>
+            </header>
+            <ul class="tags">
+              <li>Leadership</li>
+              <li>Communication efficace</li>
+              <li>Travail d’équipe</li>
+              <li>Intégrité</li>
+              <li>Honnêteté</li>
+              <li>Confidentialité</li>
+              <li lang="en">Cross-cultural awareness</li>
+              <li>Loyauté</li>
+              <li>Sincérité</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <header class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-spark"></use></svg></span>
+              <h3>Adaptation</h3>
+            </header>
+            <ul class="tags">
+              <li lang="en">Curiosity and lifelong learning</li>
+              <li>Capacité à travailler sous stress</li>
+              <li>Discipline</li>
+              <li>Persévérance</li>
+              <li>Adaptabilité</li>
+              <li>Résilience</li>
+              <li>Flexibilité</li>
+              <li>Agilité</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         LANGUES
+         ========================================================== -->
+    <section class="section section--tint" id="langues" aria-labelledby="langues-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">06</span><span class="eyebrow__label">Langues</span></p>
+          <h2 class="section-title" id="langues-title">Des langues pour travailler et <em>échanger</em>.</h2>
+          <p class="section-head__lead">Niveaux déclarés selon le Cadre européen commun de référence pour les langues (CECRL).</p>
+        </header>
+
+        <ul class="lang-grid">
+          <li class="lang-card" data-reveal>
+            <div class="lang-card__top">
+              <h3>Français</h3>
+              <span class="lang-card__level">C2</span>
+            </div>
+            <div class="lang-card__scale" aria-hidden="true">
+              <span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span>
+            </div>
+            <p class="lang-card__desc">Maîtrise</p>
+          </li>
+          <li class="lang-card" data-reveal>
+            <div class="lang-card__top">
+              <h3>Anglais</h3>
+              <span class="lang-card__level">B2</span>
+            </div>
+            <div class="lang-card__scale" aria-hidden="true">
+              <span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span></span><span></span>
+            </div>
+            <p class="lang-card__desc">Avancé</p>
+          </li>
+          <li class="lang-card" data-reveal>
+            <div class="lang-card__top">
+              <h3>Lingala</h3>
+              <span class="lang-card__level">B2</span>
+            </div>
+            <div class="lang-card__scale" aria-hidden="true">
+              <span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span></span><span></span>
+            </div>
+            <p class="lang-card__desc">Avancé</p>
+          </li>
+          <li class="lang-card" data-reveal>
+            <div class="lang-card__top">
+              <h3>Tshiluba</h3>
+              <span class="lang-card__level">B1</span>
+            </div>
+            <div class="lang-card__scale" aria-hidden="true">
+              <span class="is-on"></span><span class="is-on"></span><span class="is-on"></span><span></span><span></span><span></span>
+            </div>
+            <p class="lang-card__desc">Intermédiaire</p>
+          </li>
+        </ul>
+        <p class="lang-note">CECRL — Cadre européen commun de référence pour les langues. Les niveaux affichés sont ceux déclarés dans le CV.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         FORMATION CONTINUE
+         ========================================================== -->
+    <section class="section" id="formation" aria-labelledby="formation-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__number">07</span><span class="eyebrow__label">Formation continue</span></p>
+          <h2 class="section-title" id="formation-title">Continuer d’apprendre, avec <em>méthode</em>.</h2>
+          <p class="section-head__lead">Un espace dédié aux ateliers et formations qui accompagnent le développement personnel et professionnel.</p>
+        </header>
+
+        <article class="training-card" data-reveal>
+          <div class="training-card__content">
+            <div class="training-card__tags">
+              <span class="tag">Atelier</span>
+              <span class="tag">Développement personnel</span>
+            </div>
+            <h3 class="training-card__title">Atelier sur l’employabilité et le développement personnel</h3>
+            <p class="training-card__facilitator">Animé par <strong>Me Blanchine Mazanga</strong></p>
+          </div>
+          <div class="training-card__sheet" role="group" aria-label="Informations sur la formation">
+            <p class="training-card__row"><span>Thème</span>Employabilité &amp; développement personnel</p>
+            <p class="training-card__row"><span>Format</span>Atelier</p>
+            <p class="training-card__row"><span>Animation</span>Me Blanchine Mazanga</p>
+          </div>
+        </article>
+
+        <!-- MODÈLE POUR UNE FORMATION SUPPLÉMENTAIRE :
+             dupliquer le bloc <article class="training-card"> ci-dessus,
+             puis renseigner le titre, l’intervenant et les informations disponibles.
+             Ne pas inventer de date ni de contenu. -->
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         RÉFÉRENCES — noms et fonctions uniquement.
+         Les coordonnées des référents ne sont volontairement pas publiées.
+         Ne les ajouter qu’avec l’accord explicite des personnes concernées.
+         ========================================================== -->
+    <section class="section section--compact" id="references" aria-labelledby="references-title">
+      <div class="container">
+        <div class="refs__head" data-reveal>
+          <div>
+            <p class="eyebrow"><span class="eyebrow__number">08</span><span class="eyebrow__label">Références</span></p>
+            <h2 class="refs__title" id="references-title">Références professionnelles &amp; académiques</h2>
+          </div>
+          <p class="refs__note">Coordonnées non publiées par souci de confidentialité — disponibles sur demande.</p>
+        </div>
+
+        <ul class="ref-grid">
+          <li class="ref-card" data-reveal>
+            <h3>Patient Tshilombo</h3>
+            <p>EquityBCDC · Digital Process Analyst</p>
+          </li>
+          <li class="ref-card" data-reveal>
+            <h3>Goshen Kitenge</h3>
+            <p>ESMK · Étudiant</p>
+          </li>
+          <li class="ref-card" data-reveal>
+            <h3>Douceur Yowa</h3>
+            <p>OneTech · Responsable des ventes et administration</p>
+          </li>
+          <li class="ref-card" data-reveal>
+            <h3>Délice Sotha</h3>
+            <p>UPC · Étudiante</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CONTACT
+         ========================================================== -->
+    <section class="section section--dark section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__intro" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__number">09</span><span class="eyebrow__label">Contact</span></p>
+            <h2 class="section-title" id="contact-title">Un projet, une question, une <em>envie</em> d’échanger&nbsp;?</h2>
+            <p class="contact__lead">Écrivez directement à Sharon ou préparez un message avec le formulaire. Les échanges peuvent porter sur la recherche, l’analyse économique, les politiques publiques ou la gestion de projets.</p>
+
+            <ul class="contact__list">
+              <li>
+                <span class="contact__label">E-mail</span>
+                <a class="contact__value" href="mailto:sharonbadibanga14@gmail.com">sharonbadibanga14@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact__label">Téléphone</span>
+                <a class="contact__value" href="tel:+243897969423">+243 897 969 423</a>
+              </li>
+              <li>
+                <span class="contact__label">Localisation</span>
+                <span class="contact__value">Kinshasa, RDC</span>
+              </li>
+              <li>
+                <span class="contact__label">LinkedIn</span>
+                <a class="contact__value" href="https://www.linkedin.com/in/sharon-badibanga-8170a128a" target="_blank" rel="noopener noreferrer">Sharon MBUYI · profil professionnel<span class="visually-hidden"> (nouvel onglet)</span></a>
+              </li>
+            </ul>
+
+            <div class="contact__actions">
+              <a class="btn btn--light" href="mailto:sharonbadibanga14@gmail.com">
+                Écrire un e-mail
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              </a>
+              <a class="btn btn--ghost-light" href="https://www.linkedin.com/in/sharon-badibanga-8170a128a" target="_blank" rel="noopener noreferrer">
+                Profil LinkedIn<span class="visually-hidden"> (nouvel onglet)</span>
+                <svg class="icon icon--fill" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__form-wrap" data-reveal>
+            <h3 class="form__title">Préparer un message</h3>
+            <p class="form__intro">Renseignez les champs : votre messagerie s’ouvrira avec un e-mail déjà rédigé. Tous les champs sont requis.</p>
+
+            <!-- FORMULAIRE FRONTEND UNIQUEMENT.
+                 Le repli actuel ouvre le client de messagerie (mailto) : aucune donnée
+                 n’est transmise à un serveur. Pour un envoi autonome, brancher un service
+                 (Formspree, Netlify Forms, etc.) dans l’attribut action et adapter js/script.js. -->
+            <form class="form" action="mailto:sharonbadibanga14@gmail.com" method="post" enctype="text/plain" aria-describedby="form-note" data-contact-form>
+              <div class="form__split">
+                <div class="form__field">
+                  <label for="contact-name">Nom complet</label>
+                  <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+                </div>
+                <div class="form__field">
+                  <label for="contact-email">Adresse e-mail</label>
+                  <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="form__field">
+                <label for="contact-subject">Objet</label>
+                <input id="contact-subject" name="subject" type="text" maxlength="150" required>
+              </div>
+              <div class="form__field">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" maxlength="2000" required></textarea>
+              </div>
+              <button class="btn btn--primary form__submit" type="submit" aria-describedby="form-note">
+                Préparer mon message
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg>
+              </button>
+              <p class="form__note" id="form-note">Ce formulaire ne transmet aucune donnée à un serveur : il prépare un e-mail dans votre logiciel de messagerie.</p>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       PIED DE PAGE
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="#accueil" aria-label="Retour à l’accueil">
+          <span class="brand__mark" aria-hidden="true">SB</span>
+          <span class="brand__text">
+            <span class="brand__name">Sharon MBUYI BADIBANGA</span>
+            <span class="brand__sub">Portfolio · Kinshasa</span>
+          </span>
+        </a>
+        <p class="footer__desc">Étudiante en Master en Économie Internationale<br>Université Protestante au Congo</p>
+        <p class="footer__location">Kinshasa, République démocratique du Congo</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Plan du site">
+        <p class="footer__title">Plan du site</p>
+        <ul class="footer__links">
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#parcours">Parcours académique</a></li>
+          <li><a href="#experiences">Expériences</a></li>
+          <li><a href="#leadership">Leadership &amp; engagements</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#langues">Langues</a></li>
+          <li><a href="#formation">Formation continue</a></li>
+          <li><a href="#references">Références</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <p class="footer__title">Restons en contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:sharonbadibanga14@gmail.com">sharonbadibanga14@gmail.com</a></li>
+          <li><a href="tel:+243897969423">+243 897 969 423</a></li>
+          <li><a href="https://www.linkedin.com/in/sharon-badibanga-8170a128a" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+        </ul>
+        <a class="footer__top-link" href="#accueil">
+          Retour en haut
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> Sharon MBUYI BADIBANGA. Tous droits réservés.</p>
+      <p>Portfolio personnel · Kinshasa, RDC</p>
+    </div>
+  </footer>
+
+  <!-- Bibliothèque d’icônes inline : évite des requêtes supplémentaires et fonctionne hors ligne. -->
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 8 9 6 9-6"/></symbol>
+    <symbol id="i-analytics" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 12h18"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5Z"/><path d="M8.5 10h.01M12 10h.01M15.5 10h.01"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></symbol>
+  </svg>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿# Source CV privée (contient l’adresse complète et les coordonnées des référents).
+# Ne jamais versionner ce fichier ni le dossier _sources.
+Portfolio.pdf
+/_sources/
+
+# Outils et tests locaux
+/.review/
+/review/
+/node_modules/
+
+# Secrets et configuration locale (ne jamais versionner)
+.env
+.env.*
+*.pem
+*.key
+
+# Systèmes d’exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Journaux
+*.log
+
+# Archive de déploiement créée localement
+/portfolio-sharon.zip
