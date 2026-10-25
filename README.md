@@ -138,6 +138,11 @@ changement, rechercher puis remplacer :
 - `+243 897 969 423` et `+243897969423` (dans les liens `tel:`)
 - `https://www.linkedin.com/in/sharon-badibanga-8170a128a`
 
+> **URL LinkedIn confirmée par la propriétaire** : `https://www.linkedin.com/in/sharon-badibanga-8170a128a`.
+> Les paramètres ajoutés par l’application mobile lors d’un partage (`?utm_source=share_via&utm_content=profile&utm_medium=member_ios`)
+> sont des paramètres de suivi, sans effet sur la destination. Ils ne sont volontairement pas
+> conservés : le lien du portfolio reste propre, stable et sans tracking.
+
 Penser également à mettre à jour le bloc de données structurées `application/ld+json` dans le
 `<head>`, et l’attribut `action` du formulaire.
 
@@ -315,8 +320,6 @@ Après déploiement :
 - [ ] Organisation du poste de Directrice communication & marketing, et statut actuel du poste.
 - [ ] Intitulé complet de la seconde formation continue, et autres formations suivies.
 - [ ] Années des diplômes (baccalauréat, licence) et dates du Master, si elle souhaite les afficher.
-- [ ] Confirmer l’URL exacte du profil LinkedIn (elle a été fournie par le propriétaire du
-      portfolio mais n’apparaît pas dans le PDF source).
 - [ ] Détails sur « World Bank Group DRC online delegates » et les conférences philosophiques
       (année, rôle) — facultatifs.
 - [ ] Décision sur l’affichage des coordonnées des référents (avec leur accord) et de l’adresse
