@@ -414,34 +414,6 @@ button {
   border-color: var(--gold-soft);
 }
 
-.btn-icon {
-  display: inline-grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  flex: none;
-  border: 1px solid var(--line-strong);
-  border-radius: 50%;
-  color: var(--ink);
-  transition:
-    color var(--dur) var(--ease),
-    border-color var(--dur) var(--ease),
-    background-color var(--dur) var(--ease),
-    transform var(--dur) var(--ease);
-}
-
-.btn-icon:hover {
-  color: var(--forest);
-  border-color: var(--gold);
-  background: var(--paper);
-  transform: translateY(-2px);
-}
-
-.btn-icon .icon {
-  width: 1.05rem;
-  height: 1.05rem;
-}
-
 .link-arrow {
   display: inline-flex;
   align-items: center;
